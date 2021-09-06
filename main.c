@@ -6,7 +6,7 @@
 /*   By: emgarcia <emgarcia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 15:21:52 by emgarcia          #+#    #+#             */
-/*   Updated: 2021/09/06 14:59:17 by emgarcia         ###   ########.fr       */
+/*   Updated: 2021/09/06 18:21:23 by emgarcia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,31 @@
 
 void	leaks(void)
 {
-	system("leaks test");
+	system("leaks push_swap");
+}
+
+void	ft_write_error(void)
+{
+	write(1, "Error", 5);
 }
 
 int	main(int argc, char const *argv[])
 {
+	size_t	size;
 	size_t	i;
-	size_t	j;
-	char	**nums;
+	int		*stack;
 
-	i = 0;
-	j = -1;
-	printf("argc : %d\n", argc);
-	while (++i < (size_t)argc)
+	i = -1;
+	size = ft_countstack(argc, argv);
+	stack = ft_convstack(argc, argv, size);
+	if (!stack)
 	{
-		nums = ft_split(argv[i], ' ');
-		while (++j < ft_strlensplit(nums))
-			printf("nums[%zu][%zu] : %s\n", i, j, nums[j]);
-		ft_freesplit(nums);
-		j = -1;
+		ft_write_error();
+		return (0);
 	}
-	//atexit(leaks);
+	stack[size] = '\0';
+	while (++i < size)
+		printf("stack[%zu] : %d\n", i, stack[i]);
+	free(stack);
 	return (0);
 }
