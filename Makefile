@@ -6,11 +6,11 @@
 #    By: emgarcia <emgarcia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/02 20:26:23 by emgarcia          #+#    #+#              #
-#    Updated: 2021/09/06 17:57:56 by emgarcia         ###   ########.fr        #
+#    Updated: 2021/09/06 20:19:00 by emgarcia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	= ft_stackaux.c main.c ft_push_swap.c ft_splitaux.c
+SRCS	= ft_long_atoi.c ft_stackaux.c main.c ft_push_swap.c ft_splitaux.c
 LIBFT	= libft/libft.a
 PUSH_S	= push_swap.a
 OBJS	= ${SRCS:.c=.o}

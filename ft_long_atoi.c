@@ -1,41 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_long_atoi.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emgarcia <emgarcia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/03 15:21:52 by emgarcia          #+#    #+#             */
-/*   Updated: 2021/09/07 17:29:34 by emgarcia         ###   ########.fr       */
+/*   Created: 2021/09/06 19:36:11 by emgarcia          #+#    #+#             */
+/*   Updated: 2021/09/06 21:16:42 by emgarcia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_push_swap.h"
 
-void	leaks(void)
+long	ft_long_atoi(const char *str)
 {
-	system("leaks push_swap");
-}
+	int		i;
+	long	number;
+	int		signo;
 
-void	ft_write_error(void)
-{
-	write(1, "Error\n", 6);
-}
-
-int	main(int argc, char const *argv[])
-{
-	size_t	size;
-	int		*stack;
-
-	size = ft_countstack(argc, argv);
-	stack = ft_convstack(argc, argv, size);
-	if (!stack)
-	{
-		ft_write_error();
-		return (0);
-	}
-	stack[size] = '\0';
-	ft_push_swap(stack, size);
-	//atexit(leaks);
-	return (0);
+	i = 0;
+	while ((str[i] > 8 && str[i] < 14) || str[i] == ' ')
+		i++;
+	signo = 1;
+	if (str[i] == '-' || str[i] == '+')
+		if (str[i++] == '-')
+			signo *= (-1);
+	number = 0;
+	i--;
+	while (ft_isdigit(str[++i]))
+		number = 10 * number + str[i] - '0';
+	if (str[i])
+		return (-2147483649);
+	number *= signo;
+	return (number);
 }
