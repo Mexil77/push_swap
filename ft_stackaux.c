@@ -6,7 +6,7 @@
 /*   By: emgarcia <emgarcia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/06 17:57:06 by emgarcia          #+#    #+#             */
-/*   Updated: 2021/09/07 16:26:42 by emgarcia         ###   ########.fr       */
+/*   Updated: 2021/09/07 22:16:40 by emgarcia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,4 +86,13 @@ int	*ft_convstack(int argc, const char **argv, size_t size)
 		return (NULL);
 	}
 	return (stack);
+}
+
+void	ft_inistackb(int *stackb, size_t size)
+{
+	size_t	i;
+
+	i = -1;
+	while (++i < size)
+		stackb[i] = -1;
 }

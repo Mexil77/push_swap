@@ -6,7 +6,7 @@
 /*   By: emgarcia <emgarcia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 15:21:52 by emgarcia          #+#    #+#             */
-/*   Updated: 2021/09/07 17:29:34 by emgarcia         ###   ########.fr       */
+/*   Updated: 2021/09/07 23:23:17 by emgarcia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,6 @@ int	main(int argc, char const *argv[])
 	}
 	stack[size] = '\0';
 	ft_push_swap(stack, size);
-	//atexit(leaks);
+	atexit(leaks);
 	return (0);
 }
