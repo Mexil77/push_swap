@@ -6,7 +6,7 @@
 /*   By: emgarcia <emgarcia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/07 22:01:57 by emgarcia          #+#    #+#             */
-/*   Updated: 2021/09/08 16:21:19 by emgarcia         ###   ########.fr       */
+/*   Updated: 2021/09/08 19:06:30 by emgarcia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	ft_pa(int *stacka, int *stackb, size_t size)
 	size_t	i;
 	int		aux;
 
-	write(1, "PA\n", 3);
+	write(1, "pa\n", 3);
 	aux = stackb[0];
 	i = -1;
 	while (++i < size - 1 && stackb[i + 1] > -1)
@@ -46,7 +46,7 @@ void	ft_pb(int *stacka, int *stackb, size_t size)
 	size_t	i;
 	int		aux;
 
-	write(1, "PB\n", 3);
+	write(1, "pb\n", 3);
 	aux = stacka[0];
 	i = -1;
 	while (++i < size - 1 && stacka[i + 1] > -1)
@@ -64,7 +64,7 @@ void	ft_ra(int *stacka, size_t size)
 	size_t	i;
 	int		aux;
 
-	write(1, "RA\n", 3);
+	write(1, "ra\n", 3);
 	aux = stacka[0];
 	i = -1;
 	while (++i < size - 1 && stacka[i + 1] > -1)
