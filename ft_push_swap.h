@@ -6,7 +6,7 @@
 /*   By: emgarcia <emgarcia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/02 17:53:27 by emgarcia          #+#    #+#             */
-/*   Updated: 2021/09/08 16:57:04 by emgarcia         ###   ########.fr       */
+/*   Updated: 2021/09/08 21:38:29 by emgarcia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ void	ft_pa(int *stacka, int *stackb, size_t size);
 void	ft_pb(int *stacka, int *stackb, size_t size);
 void	ft_ra(int *stacka, size_t size);
 size_t	ft_issort(int *stacka, size_t size);
+size_t	ft_isrepeat(char **nums, size_t posnum);
 
 #endif

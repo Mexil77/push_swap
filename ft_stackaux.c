@@ -6,7 +6,7 @@
 /*   By: emgarcia <emgarcia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/06 17:57:06 by emgarcia          #+#    #+#             */
-/*   Updated: 2021/09/07 22:16:40 by emgarcia         ###   ########.fr       */
+/*   Updated: 2021/09/08 21:38:54 by emgarcia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,8 @@ size_t	ft_valnums(char **nums, int *stack, size_t sizenums)
 	while (++i < ft_strlensplit(nums))
 	{
 		if (ft_long_atoi(nums[i]) > INT_MAX || ft_long_atoi(nums[i]) < INT_MIN)
+			return (0);
+		if (ft_isrepeat(nums, i))
 			return (0);
 		while (++j < sizenums)
 			if (ft_atoi(nums[i]) == stack[j])
