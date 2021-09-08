@@ -6,16 +6,11 @@
 /*   By: emgarcia <emgarcia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 15:21:52 by emgarcia          #+#    #+#             */
-/*   Updated: 2021/09/08 19:56:42 by emgarcia         ###   ########.fr       */
+/*   Updated: 2021/09/08 21:51:29 by emgarcia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_push_swap.h"
-
-void	leaks(void)
-{
-	system("leaks push_swap");
-}
 
 void	ft_write_error(void)
 {
@@ -36,6 +31,5 @@ int	main(int argc, char const *argv[])
 	}
 	stack[size] = '\0';
 	ft_push_swap(stack, size);
-	//atexit(leaks);
 	return (0);
 }

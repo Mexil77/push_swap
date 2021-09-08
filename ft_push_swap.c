@@ -6,26 +6,11 @@
 /*   By: emgarcia <emgarcia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/02 17:52:15 by emgarcia          #+#    #+#             */
-/*   Updated: 2021/09/08 16:59:54 by emgarcia         ###   ########.fr       */
+/*   Updated: 2021/09/08 21:52:04 by emgarcia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_push_swap.h"
-
-void	ft_impbin(int n)
-{
-	if (!n)
-		printf("0");
-	while (n)
-	{
-		if (n & 1)
-			printf("1");
-		else
-			printf("0");
-		n >>= 1;
-	}
-	printf("\n");
-}
 
 int	*ft_renamenums(int *stack, size_t size)
 {
@@ -51,26 +36,6 @@ int	*ft_renamenums(int *stack, size_t size)
 		j = -1;
 	}
 	return (newstack);
-}
-
-void	ft_printaux(int *stacka, int *stackb, size_t size)
-{
-	size_t	i;
-
-	i = -1;
-	while (++i < size)
-		printf("stacka[%zu] : %d\n", i, stacka[i]);
-	i = -1;
-	while (++i < size && stacka[i] >= 0)
-		ft_impbin(stacka[i]);
-	printf("\n");
-	i = -1;
-	while (++i < size)
-		printf("stackb[%zu] : %d\n", i, stackb[i]);
-	i = -1;
-	while (++i < size && stackb[i] >= 0)
-		ft_impbin(stackb[i]);
-	printf("\n");
 }
 
 void	ft_push_swap(int *stacka, size_t size)
