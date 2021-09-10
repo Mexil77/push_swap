@@ -6,14 +6,13 @@
 /*   By: emgarcia <emgarcia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/02 17:53:27 by emgarcia          #+#    #+#             */
-/*   Updated: 2021/09/10 16:20:38 by emgarcia         ###   ########.fr       */
+/*   Updated: 2021/09/10 19:51:59 by emgarcia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PUSH_SWAP_H
 # define FT_PUSH_SWAP_H
 # include "libft/libft.h"
-# include <stdio.h>
 # include <limits.h>
 
 void	ft_long_push_swap(int *stack, size_t size);

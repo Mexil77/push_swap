@@ -6,7 +6,7 @@
 #    By: emgarcia <emgarcia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/02 20:26:23 by emgarcia          #+#    #+#              #
-#    Updated: 2021/09/10 14:38:55 by emgarcia         ###   ########.fr        #
+#    Updated: 2021/09/10 19:54:24 by emgarcia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,11 +33,11 @@ $(PUSH_S): ${OBJS}
 	ar -crs ${PUSH_S} ${OBJS} ${LIBFT}
 
 clean:
-	cd libft ; make clean
-	${RM} ${OBJS}
+	cd libft ; make fclean
+	${RM} ${OBJS} ${PUSH_S}
 
 fclean: clean
 	cd libft ; make fclean
-	${RM} ${NAME} ${PUSH_S}
+	${RM} ${NAME}
 
 re: fclean all
