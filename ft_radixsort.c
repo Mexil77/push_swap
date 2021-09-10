@@ -6,19 +6,19 @@
 /*   By: emgarcia <emgarcia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/08 16:23:28 by emgarcia          #+#    #+#             */
-/*   Updated: 2021/09/08 16:55:33 by emgarcia         ###   ########.fr       */
+/*   Updated: 2021/09/10 14:28:15 by emgarcia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_push_swap.h"
 
-size_t	ft_issort(int *stacka, size_t size)
+size_t	ft_issort(int *stack, size_t size)
 {
 	size_t	i;
 
 	i = -1;
-	while (++i < size - 1)
-		if (stacka[i] > stacka[i + 1])
+	while (++i < size - 1 && stack[i + 1] > -1)
+		if (stack[i] > stack[i + 1])
 			return (0);
 	return (1);
 }

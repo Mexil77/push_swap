@@ -1,40 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_operationsb.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emgarcia <emgarcia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/03 15:21:52 by emgarcia          #+#    #+#             */
-/*   Updated: 2021/09/09 21:22:38 by emgarcia         ###   ########.fr       */
+/*   Created: 2021/09/10 14:20:01 by emgarcia          #+#    #+#             */
+/*   Updated: 2021/09/10 14:40:56 by emgarcia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_push_swap.h"
 
-void	ft_write_error(void)
+void	ft_pb(int *stacka, int *stackb, size_t size)
 {
-	write(1, "Error\n", 6);
+	size_t	i;
+	int		aux;
+
+	write(1, "pb\n", 3);
+	aux = stacka[0];
+	i = -1;
+	while (++i < size - 1 && stacka[i + 1] > -1)
+		stacka[i] = stacka[i + 1];
+	while (i < size)
+		stacka[i++] = -1;
+	i = size;
+	while (--i > 0)
+		stackb[i] = stackb[i - 1];
+	stackb[i] = aux;
 }
 
-int	main(int argc, char const *argv[])
+void	ft_sb(int *stackb)
 {
-	size_t	size;
-	int		*stack;
+	int	aux;
 
-	size = ft_countstack(argc, argv);
-	if (!size)
-		return (0);
-	stack = ft_convstack(argc, argv, size);
-	if (!stack)
-	{
-		ft_write_error();
-		return (0);
-	}
-	stack[size] = '\0';
-	if (size < 6)
-		ft_short_push_swap(stack, size);
-	else
-		ft_long_push_swap(stack, size);
-	return (0);
+	write(1, "sb\n", 3);
+	aux = stackb[0];
+	stackb[0] = stackb[1];
+	stackb[1] = aux;
 }
